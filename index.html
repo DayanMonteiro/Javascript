@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Curso Javascript - Variáveis</title>
+  </head>
+
+  <body>
+    <script>
+      // variáveis em js basta digitar var
+      var nome = "Dayan"; // variavel string
+      var idade = 33; // variavel inteiro
+      var peso = 89.5; // float valores decimais
+      var humano = true; // buleanos declaram se é verdadeiro ou falso
+
+      var alunos = ["Dayan", "Laryssa", "Daniel", "Ana"]; //vetores basta colocar entre colchetes e separar por vírgulas
+
+      var aluno = {
+        nome: "Dayan",
+        idade: 23,
+        peso: 89.5,
+        humano: true,
+      }; //objetos, que são variaveis que guardam mais de um valor que guardam todos os valores referentes aquele item, veja coloquei dentro do objeto todas as variaveis anteriores
+
+      console.log(alunos[0]); // essa é uma função global na qual podemos mostrar as variaveis no ex:  console.log(alunos [0]); ele buscou no vetor alunos o aluno 0 q no caso era Dayan porque ele estava dentro dessa variável       var alunos = ["Dayan", "Laryssa", "Daniel", "Ana"]; então o aluno 0 era Dayan aluno 1 Laryssa, aluno 2 Daniel e aluno 3 Ana.
+
+      console.log(aluno.nome); // podemos colocar mais de uma variavel desde q elas ja tenham sido declaradas anteriormente.
+    </script>
+    <!--<script>
+ javascript - deixamos ele aqui como altuma coisa antes do fechamento do body devido ao processo de renderização da pagina ser vertical, asism tudo que vier antes do javascript será carregado primeiro.
+        </script> -->
+  </body>
+</html>
