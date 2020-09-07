@@ -1,33 +1,23 @@
 <html>
   <head>
-    <title>Curso Javascript - Estrutura de repetição </title>
+    <title>Curso Javascript - Intervalor e timeout </title>
   </head>
 
   <body>
     <script>
-        // for, while
-
-      //for (var i = 0; i <= 100; i++) {
-      // quando i for menor ou a 100 vai somar uma unidade a mais a variavel i
-       // console.log(i);
+      //ex 1) setInterval vai repetir várias vezes no caso do ex ele vai repetir a frase helleo word de 1 em 1 segundo
+      //function exibeAlgo() {
+       // console.log('Hello Word');
       //}
 
-      var j = 0;
-      while (j <= 100) {
-        console.log(j);
+//setInterval(exibeAlgo, 1000);
 
-        j++;
+// ex 2 setTimeout ele vai exibir apenas uma vez no caso do ex ele vai exibir  uma vez depois de 5 segundos
+function exibeAlgo() {
+        console.log('Hello Word');
       }
 
-
-// quando utilizar o for ou o while? o for é quando você ja souber o tamanho do intervalo, no while usamos geramente quando não sabemos quantas vezes o fluxo será executado, ex:
-
-      var j = 3161545215;
-      while (j > 50) {
-        console.log(j);
-
-        j /= 5;
-      }
+setTimeout(exibeAlgo, 5000);
 
     </script>
   </body>
