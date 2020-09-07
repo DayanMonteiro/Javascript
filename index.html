@@ -1,23 +1,34 @@
 <html>
   <head>
-    <title>Curso Javascript - Condição ternária</title>
+    <title>Curso Javascript - Estrutura de repetição </title>
   </head>
 
   <body>
     <script>
+        // for, while
 
-     // var sexo = 'M';
-      // representa que se o sexo for M ele retorna Masculino, se não ele retorna feminino
-      //if(sexo === 'M') {
-        //return 'Masculino';
-      //} else {
-       // return 'Feminino';
-     // }
-      // mas podemos escrever isso com um codigo mais limpo ficando:
+      //for (var i = 0; i <= 100; i++) {
+      // quando i for menor ou a 100 vai somar uma unidade a mais a variavel i
+       // console.log(i);
+      //}
 
-      var sexo = 'M';
-      return (sexo === 'M') ? 'Masculino' : 'Feminino'; // essa montagem é uma armação ternária quando usamos ? e :
-      console.log (retorno)
+      var j = 0;
+      while (j <= 100) {
+        console.log(j);
+
+        j++;
+      }
+
+
+// quando utilizar o for ou o while? o for é quando você ja souber o tamanho do intervalo, no while usamos geramente quando não sabemos quantas vezes o fluxo será executado, ex:
+
+      var j = 3161545215;
+      while (j > 50) {
+        console.log(j);
+
+        j /= 5;
+      }
+
     </script>
   </body>
 </html>
