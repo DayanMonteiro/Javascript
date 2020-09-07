@@ -1,40 +1,55 @@
 <html>
   <head>
-    <title>Curso Javascript - Condicional</title>
+    <title>Curso Javascript - operadores logicos</title>
   </head>
 
   <body>
     <script>
-      function retornaSexo(sexo) {
-        // M, F
-        // Masculino, Feminino
-        // ex 1)
-        // if (sexo === 'M') {
-        //  return 'Masculino';
-        // } else if (sexo === 'F') {
-        //  return 'Feminino'
-        // } else {
-        //   return 'Outro';
-        //  }
-        // }
+      // and, or, not
 
-        // var resultado = retornaSexo('F');
-        // console.log(resultado);
+//ex 1) and - o and é representado por 2 e comerciais & &
+      //var sexo = 'M', idade = 20;
 
-        // ex 2)
+      //if(sexo === 'M' && idade >=18) {
+       // console.log('ok')
+      //}
 
-        switch (sexo) {
-          case "M":
-            return "Masculino";
-          case "F":
-            return "Feminino";
-          default:
-            return "Outro";
-        }
-      }
+// ex 2) or -  o or é representado por 2 barras retas ||
 
-      var resultado = retornaSexo("F");
-      console.log(resultado);
+            //var sexo = 'M', idade = 20;
+
+      //if(sexo === 'M' || idade >=18) {
+       // console.log('ok')
+      //}
+
+// ex 3) not - 
+
+      //var sexo = 'M';
+
+      //if (sexo !== 'M') {
+        // ! = = quando uso os 3 sinais juntos eles montam !==, ele verifica a desigualdade entre as informações
+        //console.log('ok');
+      //}
+
+// ex 4) armazenar valor das condições em variáveis
+
+       // var sexo = 'M';
+
+        //var masculino;
+        //if (sexo === 'M') {
+         // masculino = true;
+       // } else {
+        //  masculino = false
+        //}
+       // console.log(masculino);
+
+// com um codigo mais limpo poderiamos executar
+
+        var sexo = 'M';
+
+        var masculino = (sexo === 'M');
+
+        console.log(masculino);
     </script>
   </body>
 </html>
