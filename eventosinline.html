@@ -1,20 +1,32 @@
 <html>
   <head>
+    <meta charset="utf-8" />
     <title>Curso de Javascript - Eventos Inline</title>
   </head>
   <body>
     <div id="app">
-      <!-- <button onclick="mostraAlerta()">Me pressione</button> -->
-
-      <!--<button onmouseover="mostraAlerta()">Me pressione</button> -->
-
-      <input onkeypress="mostraAlerta()"/>
+      <input type="text" name="nome" />
+      <button class="botao">Adicionar</button>
     </div>
 
     <script>
-      function mostraAlerta() {
-        alert("Botão foi clicado");
-      }
+      // var inputElement = document.getElementById('nome'); ---- dessa forma vou buscar o id nome
+
+      //var inputElement = document.getElementsByTagName('input')[0]; ---- dessa forma vou buscar o input, como posso ter mais de um input add o [0] para declarar que queria o primeiro input
+
+      //var inputElement = document.getElementsByClassName('nome')[0]; vai buscar por classe
+
+      //var inputElement = document.querySelector("input");
+      // utilizando o querySelector eu posso buscar qualquer coisa dentro da DOM, o querySelector retorna um elemento, porém para retornar lista dom varios elementos usamos querySelectorAll
+
+      var inputElement = document.querySelector("input[name=nome]");
+      var btnElement = document.querySelector("button.botao");
+
+      btnElement.onclick = function () {
+        var text = inputElement.value;
+
+        alert(text);
+      };
     </script>
   </body>
 </html>
