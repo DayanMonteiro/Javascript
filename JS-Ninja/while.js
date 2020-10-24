@@ -1,0 +1,16 @@
+var x = 0;
+while (x < 100) {
+    console.log("Eu vou continuar estudando JS!");
+    x = x +1;
+}
+
+// construindo tabuada
+
+var a = 0;
+var b = 0;
+
+while (a <= 10) {
+    b = a * 2;
+    console.log("Valor de b: " + b);
+    a++;
+}
