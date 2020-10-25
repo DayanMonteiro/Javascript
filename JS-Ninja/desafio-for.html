@@ -1,0 +1,26 @@
+<!-- Desafio
+Utilizando o for crie um programa que calcule a função log Math.log(x) para cada valor do contador.
+Este programa deve solicitar os valores iniciais, finais e de incremento. E também escrever na tela o
+resultado.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+
+        var vi = Number(prompt("Digite o valor inicial"));
+        var vf = Number(prompt("Digite o valor final"));
+        var vc = Number(prompt("Digite o valor de incremento"));
+        var res = 0;
+        for(x = vi;x <= vf;x+=vc) {
+        res = Math.log(x);
+        console.log(res);
+        }
+
+    </script>
+    </Body>
+</html>
