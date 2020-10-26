@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+/*
+        // soma
+        var x = 10;
+        var y = 20;
+        var resultado = x + y;
+        console.log(resultado);
+        */
+        // função plin
+        var plim = function() {
+        console.log("Plim plim...");
+        }
+        plim();
+
+        // → variável da função 2
+        var x = "variável global";
+        var f1 = function() {
+        x = "variável da função 1"; // altera a variável global a primeira vez
+        }
+        f1();
+        var f2 = function() {
+        x = "variável da função 2"; // altera a variável global a primeira vez
+        }
+        f2();
+        console.log(x);
+
+
+        // ex desenho 
+        var paisagem = function() {
+        var res = "";
+
+        var vale = function(quant) {
+        for (var c = 0; c < quant; c++) {
+        res += "_";
+        }
+        };
+      
+        var montanha = function(quant) {
+        res += "/";
+
+        for (var c = 0; c < quant; c++) {
+        res += "'";
+        }
+
+        res += "\\";
+        };
+
+        vale(3);
+        montanha(4);
+        vale(6);
+        montanha(1);
+        vale(1);
+        return res;
+        };
+
+        console.log(paisagem());
+
+        // multiplas funções
+
+        var soma = function(x, y) {
+        return x + y;
+        }
+        var sub = function(x, y) {
+        return x - y;
+        }
+        var mult = function(x, y) {
+        return x * y;
+        }
+        var div = function(x, y) {
+        return x / y;
+        }
+        var calculadora = function(x, y, operacao) {
+        return operacao(x, y);
+        }
+        calculadora(2, 5, soma);
+        /*calculadora(5, 2, sub);
+        /*calculadora(10, 20, mult);
+        /*calculadora(10, 2, div);
+        
+        
+        // 
+
+       
+    </script>
+    </Body>
+</html>
