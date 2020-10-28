@@ -6,18 +6,12 @@
     <Body>
     <script>
 
-        var pais = 'russia';
+    function ola(quem) {
+    console.log("Olá " + quem); // vai puxar pro quem o substituto inserido abaixo e exibirá a mensagem com ola + o nome inserido
+    }
 
-        var lancarMissilNuclear = function(pais) {
-        console.log("Lançando míssil em 3..2..1");
-        }
-
-        if (pais == 'brasil') {
-        lancarMissilNuclear = function() {
-        console.log("Usar o telefone vermelho...");
-             }
-        }
-        lancarMissilNuclear();
+    ola("Dayan"); // vai receber o nome que substiurá quem
+    console.log("Tchau"); // exibirá a mensagem
 
     </script>
     </Body>
