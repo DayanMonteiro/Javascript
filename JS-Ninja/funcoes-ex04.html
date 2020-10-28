@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        function potencia(base, expoente) {
+            if (expoente == undefined) {
+            expoente = 2; // se estiver undefined ele define o expoente padrão como 2
+        }
+
+        var resultado = 1;
+        for (var cont = 0; cont < expoente; cont++) {
+        resultado *= base;
+        }
+        return resultado;
+        }
+
+        console.log(potencia(2));
+// → 4
+        console.log(potencia(2, 3));
+// → 8
+    </script>
+    </Body>
+</html>
