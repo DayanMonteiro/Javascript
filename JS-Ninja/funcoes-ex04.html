@@ -11,16 +11,15 @@
         }
 
         var resultado = 1;
-        for (var cont = 0; cont < expoente; cont++) {
-        resultado *= base;
+        for (var cont = 0; cont < expoente; cont++) { // vai contar de zero até o numero definido
+        resultado *= base; // pega o resultado e multilica pela base
         }
         return resultado;
         }
 
-        console.log(potencia(2));
-// → 4
-        console.log(potencia(2, 3));
-// → 8
+        console.log(potencia(2)); // assimiu 2 pq estava undefined 
+        console.log(potencia(2, 3)); // nesse caso definiu o expoente como 2 e 3
+
     </script>
     </Body>
 </html>

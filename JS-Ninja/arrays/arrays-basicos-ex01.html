@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+
+var nomes = []; 
+        var quantConvidados = Number (prompt ("Digite o número de convidados")); // captura a quantidade de convidados
+
+        for(i = 0; i < quantConvidados; i++) { // o i que é o indice irá iniciar em 0 e enquanto o indice for menor que o numero de convidades ele irá adicionar + 1 a lista
+            nomes[i] = prompt("Digite o nome do convidado" + i);  // nomes[i] ira receber o numero do convidado no indexidor ao longo da construção da listaprompt irá receber no nome do convidado e acrescentar ao nome o numero que ele se encontra na lista  
+        } // dessa forma a lista receberá ate o numero de convidados que vc estipular na lista ao estabelecer o numero de convidados
+
+        console.log(nomes)
+
+    </script>
+    </Body>
+</html>
