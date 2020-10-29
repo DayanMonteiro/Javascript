@@ -1,3 +1,5 @@
 [1028/151538.371:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
 [1028/153643.223:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
 [1028/155125.615:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1029/143145.125:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1029/143145.125:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\rodoval\AppData\Local\AVAST Software\Browser\User Data\Crashpad\attachments\0541b865-2d3c-4e6e-8759-328cf6717b1b: O sistema não pode encontrar o caminho especificado. (0x3)
