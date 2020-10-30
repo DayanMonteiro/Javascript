@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        
+        var convidados = [
+            {nome: "pietra", vip: false, idade: 02}, 
+            {nome: "danYAN", vip: true, idade: 33}, 
+            {nome: "Laryssa", vip: true, idade: 24}
+        ];
+
+        var convidadosNormalizado = convidados.map(function(item) { // o Object.assign pega tudo declarado na origem e retorna no resultado, no exemploe ele retornará o nome o vip e a idade
+                 return Object.assign(item, {nome: item.nome.toUpperCase()}); // retornar todos os nomes inseridos em letras maiusculas padronizando as diferentes digitações dos convidados
+            }); 
+
+
+            console.log(convidadosNormalizado);
+          
+            /*
+            (3) [{…}, {…}, {…}]
+            0: {nome: "PIETRA", vip: false, idade: 2}
+            1: {nome: "DANYAN", vip: true, idade: 33}
+            2: {nome: "LARYSSA", vip: true, idade: 24}
+            length: 3
+            */
+
+    </script>
+    </Body>
+</html>
