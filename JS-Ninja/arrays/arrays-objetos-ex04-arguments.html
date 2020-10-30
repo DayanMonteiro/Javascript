@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+         // ex de introdução
+        function ola(quem) {
+            if (quem == undefined) { // se quem existir ele usará o nome indo pra o else, caso o quem seja indefinido ele usará a frase do if
+            console.log("Olá tudo bem com você?");
+        } else {
+            console.log("Olá " + quem + " como vai!? Tudo bem??");
+            }
+        }
+            ola("Dayan"); // aqui defino que o quem é o Dayan, logo ele usa a opção do else
+            ola(); // como aqui o olá n foi definido ele usara a frase do if
+
+            // ex 02 - posso querer um ola pra mais pessoas então insiro a função de argumentos
+
+            function ola() {
+                console.log(arguments);
+            }
+            
+            ola("Dayan");
+            ola("Dayan", "Gabriel", "Laryssa", "Pietra");
+            ola("Dayan", "Laryssa");
+
+            // ex 03
+
+            function ola() {
+                var mensagem = "Olá ";
+
+                for(i = 0;i < arguments.length - 1;i++) {
+                    mensagem += arguments[i];
+
+                if (i < arguments.length - 2) {
+                mensagem += ", ";
+                    }
+                }
+
+                mensagem += " e " + arguments[arguments.length - 1] + "! Tudo bem!?";
+               
+                console.log(mensagem);
+                }
+
+                ola("Dayan", "Gabriel", "Laryssa", "Pietra");
+            
+    </script>
+    </Body>
+</html>

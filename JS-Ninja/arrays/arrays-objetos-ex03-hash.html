@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        // hash é um tipo de array onde os indices não são mais apenas numeros, mas qualquer coisa que queira utilizar
+
+        // ex 01
+        var convidados = {};
+        
+        convidados["Dayan"] = {idade: 33};
+
+        console.log(convidados);
+            // → {Dayan: {idade: 33}}
+
+        // ex 02
+        // se você tem uma chave única a ex um cpf por essa chave é possivel puxar todos os outros dados dentro do banco de cadastros
+
+            var convidados = {};
+            convidados["da39a3ee5e6b4b0das55bfef95231890afd80709"] = {nome: "Dayan",
+            idade: 33};
+           
+            convidados["da39a3ee5e6b4b0d3255bfef95601890afd80709"] = {nome: "Laryssa",
+            idade: 24};
+            
+            for (var id in convidados) {
+            console.log(convidados[id]);
+            }
+
+
+    </script>
+    </Body>
+</html>
