@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        
+        var numeros = [10, 18, 1, 15, 2, 12, 21, 33, 100];
+
+        var pares = function(item) {
+            return !(item % 2);
+        }
+
+        var impares = function(item) {
+            return item % 2;
+        }
+
+        var numerosPar = numeros.filter(pares);
+
+        var numerosImpar = numeros.filter(impares);
+        console.log(numerosPar);
+        /*
+            Array(5)
+            0: 10
+            1: 18
+            2: 2
+            3: 12
+            4: 100
+            length: 5
+        */
+        console.log(numerosImpar);
+        /*
+            Array(4)
+            0: 1
+            1: 15
+            2: 21
+            3: 33
+            length: 4
+        */
+    </script>
+    </Body>
+</html>
