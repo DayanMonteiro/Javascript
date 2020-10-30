@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        // em resumo a deepEqual analisa mais profundamente se todos os valores são iguais
+        function deepEqual(x, y) { // primeiro verifica se x é idêntico a y pois os === é idententico
+        if (x === y) {
+        return true;
+        }
+        // caso x seja um objeto, y também seja um objeto e ambos não sejam nulos, inicia a verificação profunda
+        else if ((typeof x == "object" && x != null) && (typeof y == "object"
+        && y != null)) {
+        // primeira estratégia é verificar a quantidade de propriedades como método key
+        if (Object.keys(x).length != Object.keys(y).length) {
+        return false; // ex os objetos são os mesmos em x e y, podemos dizer assim em x as variaveis são nome e idade, sem y eu tiver apenas uma ou caso tenha uma outra que seja diferente, já não faz sentido seguir com a analise e ja retorno falso
+        }
+        // caso seja a mesma quantidade inicia um loop em cada propriedade de x
+        for (var prop in x) {
+        // verifica se existe a mesma propriedade em y com o método hasOwnProperty
+        if (y.hasOwnProperty(prop)) {
+        // caso exista a mesma propriedade utiliza o primeiro if na recursão para verificar se são idênticas
+        if (!deepEqual(x[prop], y[prop])) {
+        return false;
+        }
+        } else {
+        // caso não exista, descarta o restante das propriedades
+        return false;
+        }
+        }
+        // caso passe em todas as verificações do for, retorna true
+        return true;
+        } else {
+        return false;
+        }
+        }
+        var convidado1 = {idade: 21};
+        var convidado2 = convidado1;
+        var convidado3 = {idade: 21};
+
+        console.log(deepEqual(convidado1, convidado3));
+        // → true
+        console.log(deepEqual(convidado1, {idade: 21}));
+        // → true
+        console.log(deepEqual(convidado1, {idade: 22}));
+        // -> false
+
+    </script>
+    </Body>
+</html>
