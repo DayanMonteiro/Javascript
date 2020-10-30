@@ -27,6 +27,27 @@
             1: "Luis"
             length: 2
         */
+
+
+        //  outra forma de escrever o return
+
+        var nomes = ["Dayan", "Peitra", "Laryssa", "Gabriel", "Luis"]; // lista de nomes
+
+        var filtrarNomes = function(item) { 
+                return item.charAt(0) == "L";
+        }
+
+        var convidados = nomes.filter(filtrarNomes);
+        
+        console.log(convidados);
+
+        /* obetenho o mesmo resultado 
+        
+            (2) ["Laryssa", "Luis"]
+            0: "Laryssa"
+            1: "Luis"
+            length: 2
+        */
     
     </script>
     </Body>
