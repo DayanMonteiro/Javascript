@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        
+        // array com strings
+
+        var nomes = ["Dayan", "Peitra", "Laryssa", "Gabriel", "Luis"]; // lista de nomes
+
+        var filtrarNomes = function(item) { 
+            if(item.charAt(0) == "L") { // quero filtrar na lista apenas os nomes começados com a letra L
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        var convidados = nomes.filter(filtrarNomes);
+        console.log(convidados);
+  
+        /*
+            (2) ["Laryssa", "Luis"]
+            0: "Laryssa"
+            1: "Luis"
+            length: 2
+        */
+    
+    </script>
+    </Body>
+</html>
