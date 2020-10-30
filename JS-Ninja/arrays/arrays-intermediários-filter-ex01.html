@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        
+        var numeros = [10, 18, 1, 15]; // valores do array
+
+        var maiorQue10 = function(item) {
+            return item > 10; // os valores que forem maiores que 10
+        }
+
+        var novosNumeros = numeros.filter(maiorQue10); // serão filtrados e entrarãona variavel novos numeros
+
+        console.log(novosNumeros);
+    /* → serão exibidos  os valores [18, 15]
+    Array(2)
+    0: 18
+    1: 15
+    length: 2 */
+    
+    </script>
+    </Body>
+</html>
