@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        
+        var convidados = [
+            {nome: "Dayan", vip: false, idade: 33},
+            {nome: "Gabriel", vip: true, idade: 20},
+            {nome: "Laryssa", vip: true, idade: 24},
+            {nome: "Pietra", vip: true, idade: 05},
+            {nome: "Julio Cesar", vip: false, idade: 07},
+            {nome: "Helena", vip: true, idade: 05},
+            {nome: "Marina", vip: false, idade: 05},
+            ]
+
+        var vips = convidados.filter(function(convidado) {
+            return convidado.vip;
+        });
+        
+        console.log(vips);
+        /*
+            (4) [{…}, {…}, {…}, {…}]
+            0: {nome: "Gabriel", vip: true, idade: 20}
+            1: {nome: "Laryssa", vip: true, idade: 24}
+            2: {nome: "Pietra", vip: true, idade: 5}
+            3: {nome: "Helena", vip: true, idade: 5}
+            length: 4
+        */
+    </script>
+    </Body>
+</html>
