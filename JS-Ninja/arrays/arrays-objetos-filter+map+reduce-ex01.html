@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        // ex 01 isolar os pares e dobrar / aplicando filter + map
+
+        var numeros = [10, 18, 1, 15, 2, 12, 21, 33, 100];
+
+        var pares = function(item) {
+             return !(item % 2);
+        }
+
+        var dobrados = function(item) {
+             return item * 2;
+        }
+
+        var numerosDobrados = numeros.filter(pares).map(dobrados); // o filter me da os numeros pares aí o map pega esses numeros e os dobra, ou seja, estou usando uma função somada na sequencia da outra
+       
+        console.log(numerosDobrados);
+
+        /*
+        Array(5)
+        0: 20
+        1: 36
+        2: 4
+        3: 24
+        4: 200
+        length: 5
+        */
+
+    </script>
+    </Body>
+</html>
