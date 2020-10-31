@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        //ex 01 
+        var valores = [1.5, 2, 4, 10];
+
+        var calc = function(total, item) {
+            return total + item;
+        }
+
+        var somatoria = valores.reduce(calc);
+        var media = somatoria / valores.length; // ao inves de dividor por 4 para ter a média, eu posso pegar o total de valores.length que representa o tamanho o total de itens do array
+
+        console.log(media);
+
+        // ex 02 outra forma
+           
+        var valores = [1.5, 2, 4, 10];
+
+        var media = valores.reduce((total, item, indice, array) => {
+        total += item;
+        
+            if (indice === array.length - 1) {
+                 return total / array.length;
+        }
+
+        return total;
+        }, 0);
+        
+        console.log(media);
+
+    </script>
+    </Body>
+</html>
