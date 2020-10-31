@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        // ex 01 
+
+        var carros = [
+            {marca: 'Audi', cor: 'preto'},
+            {marca: 'Audi', cor: 'branco'},
+            {marca: 'Ferarri', cor: 'vermelho'},
+            {marca: 'Ford', cor: 'branco'},
+            {marca: 'Peugot', cor: 'branco'}
+        ];
+
+        function groupBy(array, prop) { // função que recebe no array uma prop propriedade que quiser agrupar
+        
+        var value = array.reduce(function(total, item){ // esse value recebrá o array que for passado 
+            var key = item[prop]; // o prop são itens da marca
+
+            total[key] = (total[key] || []).concat(item);
+            return total;
+        }, {}); 
+            return value;
+        }
+
+        var agrupados = groupBy(carros, 'marca');
+        console.log(agrupados);
+
+        /*
+        {Audi: Array(2), Ferarri: Array(1), Ford: Array(1), Peugot: Array(1)}
+        Audi: Array(2)
+        0: {marca: "Audi", cor: "preto"}
+        1: {marca: "Audi", cor: "branco"}
+        length: 2
+        __proto__: Array(0)
+        Ferarri: Array(1)
+        0: {marca: "Ferarri", cor: "vermelho"}
+        length: 1
+        __proto__: Array(0)
+        Ford: Array(1)
+        0: {marca: "Ford", cor: "branco"}
+        length: 1
+        __proto__: Array(0)
+        Peugot: Array(1)
+        0: {marca: "Peugot", cor: "branco"}
+        length: 1
+        __proto__: Array(0)
+        __proto__: Object
+        */
+
+    </script>
+    </Body>
+</html>
