@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        
+        // ex 01
+
+        var numeros = [10, 18, 1, 15];
+
+        var calc = function(total, item) {
+            if(item > 10) {
+                total.push(item);
+            }
+
+            return total;
+        }
+
+        var selecionados = numeros.reduce(calc, []);
+        console.log(selecionados);
+        /*
+        Array(2)
+        0: 18
+        1: 15
+        length: 2
+        */
+       
+        // ex 02
+
+        var numeros = [10, 18, 1, 15];
+
+        var selecionados = numeros.reduce(function(total, item) {
+            if(item > 10){
+                total.push(item);
+            }
+            return total;
+        }, []);
+
+        console.log(selecionados);
+
+        /*
+        0: 18
+        1: 15
+        length: 2
+        */
+
+    </script>
+    </Body>
+</html>
