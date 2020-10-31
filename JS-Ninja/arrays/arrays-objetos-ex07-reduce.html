@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+        //ex 01  dobrar o array com map
+        var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        var dobrados = numeros.map(function(item){
+            return item * 2;
+        });
+
+        console.log(dobrados);
+        /*
+        Array(10)
+        0: 2
+        1: 4
+        2: 6
+        3: 8
+        4: 10
+        5: 12
+        6: 14
+        7: 16
+        8: 18
+        9: 20
+        length: 10
+        */
+
+        // ex 02 dobrar o array com reduce
+        
+            var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            var dobrados = numeros.reduce(function(total, item) {
+                return total.concat(item * 2);
+            }, []);
+
+            console.log(dobrados);
+            /*
+                Array(10)
+                0: 2
+                1: 4
+                2: 6
+                3: 8
+                4: 10
+                5: 12
+                6: 14
+                7: 16
+                8: 18
+                9: 20
+                length: 10
+            */
+
+            //  ex 03
+
+            var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            var calc = function(total, item) {
+                total.push(item * 2); // vai puxar cada item do array e multiplicar por 2
+                return total;
+            }
+
+            var dobrados = numeros.reduce(calc, []); // para passar puxando os valores do array eu declaro o array vazio aqui, dessa forma ele vai percorrer todo array
+            console.log(dobrados);
+
+            // ex 04
+
+            var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+                var calc = function(total, item) {
+                   return total.concat(item * 2); // o concat vai concatenar os valores realizando a multiplicação por 2 em cada elemento do array
+                }
+
+                var dobrados = numeros.reduce(calc, []); 
+                console.log(dobrados);
+
+
+    </script>
+    </Body>
+</html>
