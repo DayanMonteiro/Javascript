@@ -1,0 +1,64 @@
+<!--        Desafio
+
+Adicione em nosso pequeno sistema de controle de convidados as funções de filtro para barrar as pessoas
+com menos de 18 anos e mais.
+
+Que possa permitir agrupar entre gêneros para melhorar a organização de cobrança e ordenar por nome, já
+que no futuro evento o cliente comentou que "mulher paga meia" e que precisa estar ordenado para
+conferência mais rápida de nomes.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+
+        Array.prototype.groupBy = function(prop) {
+            var value = this.reduce(function(total, item) {
+            var key = item[prop];
+            total[key] = (total[key] || []).concat(item);
+                return total;
+            }, {});
+                return value;
+        }
+
+        var convidados = [
+            {nome: 'Dayan', idade: 33, genero: 'masculino'},
+            {nome: 'Marina', idade: 17, genero: 'feminino'},
+            {nome: 'Gabriel', idade: 21, genero: 'masculino'},
+            {nome: 'Laryssa', idade: 24, genero: 'feminino'},
+            {nome: 'Helena', idade: 16, genero: 'feminino'},
+            {nome: 'Pietra', idade: 23, genero: 'feminino'}
+        ];
+
+
+        var convidadosFiltrados = convidados.sort(function(a, b) {
+             return (a.nome > b.nome) ? 1 : -1; // 1 B precede A, -1 A precede B
+        }).filter(function(item) {
+                return item.idade >= 18;
+        }).groupBy('genero');
+        
+        console.log(convidadosFiltrados);
+
+       /*
+        {masculino: Array(2), feminino: Array(2)}
+        feminino: Array(2)
+        0: {nome: "Laryssa", idade: 24, genero: "feminino"}
+        1: {nome: "Pietra", idade: 23, genero: "feminino"}
+        length: 2
+        __proto__: Array(0)
+        masculino: Array(2)
+        0: {nome: "Dayan", idade: 33, genero: "masculino"}
+        1: {nome: "Gabriel", idade: 21, genero: "masculino"}
+        length: 2
+        __proto__: Array(0)
+        __proto__: Object
+       */
+
+    </script>
+    </Body>
+</html>
+   

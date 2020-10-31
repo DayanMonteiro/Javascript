@@ -51,6 +51,55 @@
         __proto__: Object
         */
 
+        // ex 02
+
+        var produtos = [
+                        {id: 123, nome: 'Camiseta', cor: 'preto', tamanho: 'G', categoria:'Vestuário'},
+                        {id: 125, nome: 'Shorts', cor: 'preto', tamanho: 'G', categoria:'Vestuário'},
+                        {id: 456, nome: 'Tênis', cor: 'preto', tamanho: '41', categoria:'Vestuário'},
+                        {id: 789, nome: 'Bola', cor: 'verde', tamanho: 'Único', categoria:'Esporte'}
+                        ]
+
+        Array.prototype.groupBy = function(prop) {
+            var value = this.reduce(function(total, item) { // o this é referenre o array
+                var key = item[prop];
+
+                 total[key] = (total[key] || []).concat(item);
+                        return total;
+                }, {});
+
+                    return value;
+                }
+        var produtosFiltrados = produtos.filter(function(item) {
+            return item.cor == 'preto';
+         }).filter(function(item) {
+            return item.tamanho == 'G';
+        }).groupBy('categoria');
+        
+        console.log(produtosFiltrados);
+
+        /*
+        {Vestuário: Array(2)}
+        Vestuário: Array(2)
+        0:
+        categoria: "Vestuário"
+        cor: "preto"
+        id: 123
+        nome: "Camiseta"
+        tamanho: "G"
+        __proto__: Object
+        1:
+        categoria: "Vestuário"
+        cor: "preto"
+        id: 125
+        nome: "Shorts"
+        tamanho: "G"
+        __proto__: Object
+        length: 2
+        __proto__: Array(0)
+        __proto__: Object
+        */
+
     </script>
     </Body>
 </html>
