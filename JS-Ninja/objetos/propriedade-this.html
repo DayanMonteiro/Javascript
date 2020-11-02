@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+
+        var numRegistro = "ABC";
+
+        var funcionario = {
+            nome: "Dayan",
+            idade: 33,
+            numRegistro: "12345B",
+            departamento: "TI",
+        eventos: [
+            {evento: 'faltou', data: '18/05/2019'},
+            {evento: 'falou bravo com o chefe', data: '10/06/2020'},
+        ],
+
+        detalhes: {
+            hobies: ['guitarra', 'violão'],
+        },
+
+        horarios: [],
+        registrarEntrada: function(data) {
+            this.horarios.push({data: data, evento: 'entrada'})
+            console.log("Entrada às" + data + " - " + this.numRegistro);
+        },
+
+        registrarSaida: function(data) {
+            this.horarios.push({data: data, evento: 'saida'})
+            console.log("Saída às" + data + " - " + this.numRegistro);
+            }
+        }
+
+        funcionario.registrarEntrada("30/10/2020");
+        funcionario.registrarSaida("31/10/2020");
+
+
+    </script>
+    </Body>
+</html>
