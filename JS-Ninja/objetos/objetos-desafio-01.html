@@ -1,0 +1,39 @@
+<!--
+    Criar um tipo de objeto chamado convidados que possa conter as propriedades e métodos inerentes a um
+convidado.
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+    <script>
+
+        var convidado = {
+            nome: "Dayan",
+            idade: 33,
+            vip: false,
+       
+        checkIn: function(data) {
+            console.log("Registro de dada de entrada: " + data);
+        },
+
+        checkOut: function(data) {
+            console.log("Registro de dada de saída: " + data);
+        },
+
+        pagarEvento: function(valor) {
+        console.log("Pagando evento: " + valor);
+            },
+        }
+
+        convidado.checkIn("30/10/2020")
+        convidado.checkOut("02/11/2020")
+        convidado.pagarEvento("R$ 900,00")
+
+    </script>
+    </Body>
+</html>
