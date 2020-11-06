@@ -8,29 +8,22 @@
         <div id="app">
             <h1>Lista de Convidados</h1>
 
-            <ul>
-                <li>Laryssa Fuentes
-                    <a href="#">Excluir</a>
-                </li>
+            <ul id="lista"></ul>
 
-                <li>Dayan Monteiro
-                    <a href="#">Excluir</a>
-                </li>
-
-                <li>Pietra Viana
-                    <a href="#">Excluir</a>
-                </li>
-            </ul>
-
-            <input type="text" placeholder="Digite o nome do convidado" />
-            <button>Cadastrar</button>
+            <input id="campo" type="text" placeholder="Digite o nome do convidado" />
+            <button id="botao">Cadastrar</button>
         </div>
 
-
     <script type="text/javascript"> 
+       var lista = document.getElementById('lista');
+       var campo = document.getElementById('campo');
+       var botao = document.getElementById('botao');
 
-        
-
+       var convidados = [
+            {id: 1, nome: "Dayan Monteiro", idade:33},
+            {id: 2, nome: "Laryssa Fuentes", idade:24},
+            {id: 3, nome: "Danilo Santos", idade:37},
+       ];
     </script>
     </Body>
 </html>
