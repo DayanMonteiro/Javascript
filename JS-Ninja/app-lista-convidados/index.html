@@ -15,15 +15,43 @@
         </div>
 
     <script type="text/javascript"> 
-       var lista = document.getElementById('lista');
-       var campo = document.getElementById('campo');
-       var botao = document.getElementById('botao');
+       var elLista = document.getElementById('lista');
+       var elCampo = document.getElementById('campo');
+       var elBotao = document.getElementById('botao');
 
        var convidados = [
-            {id: 1, nome: "Dayan Monteiro", idade:33},
-            {id: 2, nome: "Laryssa Fuentes", idade:24},
-            {id: 3, nome: "Danilo Santos", idade:37},
+            {nome: "Dayan Monteiro"},
+            {nome: "Laryssa Fuentes"},
+            {nome: "Danilo Santos"},
+            {nome: "Douglas Salvato"},
        ];
+
+        function listarConvidados() {
+            elLista.innerHTML = ""; //  ao add novo convidado vai limpar a lista de modo que ele não adicione de novo a lista ineita + apenas o novo convidado
+
+            for (convidado of convidados) { // parada convidado que ele criar ele mostrará esse convidado na lista
+                var elConvidado = document.createElement('li'); // vai criar um elemento li dentro da ul
+                // criar os elementos que serão colocados dentro da li
+                var elNome = document.createTextNode(convidado.nome); // o convidado.nome terá o nome que inserirmos
+
+                elConvidado.appendChild(elNome); // colocar o elemento nome dentro do elemento convidado
+                elLista.appendChild(elConvidado); // coloca o convidado na lista de convidados
+            }
+        }
+
+        listarConvidados();
+
+        var adicionarConvidado = function () {
+            var nome = elCampo.value;
+            convidados.push({nome: nome});
+            elCampo.value = ""; // ele apaga o nome digitado no campo de cadastro após cadastrar o nome
+
+            listarConvidados();         
+        }
+
+        elBotao.onclick = adicionarConvidado;
+
+
     </script>
     </Body>
 </html>
