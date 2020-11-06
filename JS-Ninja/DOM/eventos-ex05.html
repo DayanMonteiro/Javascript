@@ -1,0 +1,27 @@
+<!-- Eventos são respostas da interface para um determinado estimulo -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+
+    <button id="#botao" onclick="digaOla()">TESTE</button>
+
+    <input id="#campo" type="text" onkeypress="mostraTexto()"  /> <!-- type="text" = aber uma caixa para digitação de texto -->
+    
+    <script type="application/javascript">
+
+        var digaOla = function() {
+            alert("Olá tudo bem?");
+        };
+
+        var mostraTexto = function() {
+            var texto = document.getElementById("#campo").value;
+            console.log(texto);
+        }
+
+    </script>
+    </Body>
+</html>
