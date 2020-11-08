@@ -16,12 +16,7 @@
 
     <script type="text/javascript"> 
 
-        var convidados = [
-            {nome: "Dayan Monteiro"},
-            {nome: "Laryssa Fuentes"},
-            {nome: "Danilo Santos"},
-            {nome: "Douglas Salvato"},
-       ];
+        var convidados = JSON.parse(localStorage.getItem("convidados")) || [];
 
         var elLista = document.getElementById('lista');
         var elCampo = document.getElementById('campo');
@@ -31,12 +26,14 @@
             var nome = elCampo.value;
             convidados.push({nome: nome});
             elCampo.value = ""; // ele apaga o nome digitado no campo de cadastro após cadastrar o nome
-
+            salvarConvidados();
             listarConvidados();         
         };
 
+        function salvarConvidados() {
+            localStorage.setItem("convidados", JSON.stringify(convidados));
+        }
       
-
         function listarConvidados() {
             elLista.innerHTML = ""; //  ao add novo convidado vai limpar a lista de modo que ele não adicione de novo a lista ineita + apenas o novo convidado
 
@@ -52,6 +49,7 @@
                         return item.nome != convidado.nome;
                     });
 
+                    salvarConvidados();
                     listarConvidados();
                 };
 
@@ -66,7 +64,6 @@
         }
 
         listarConvidados();
-
 
     </script>
     </Body>
