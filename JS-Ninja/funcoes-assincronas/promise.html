@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promises</title>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+        <div id="app"></div>
+
+    <script type="text/javascript">
+
+        var ghPromisse = function() {
+            return new Promise(function(resolve, reject) { // se der certo chama resolve, se der errado chama reject
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "https://api.github.com/users/dayanmonteiro");
+                xhr.send(null);
+                xhr.onreadystatechange = function() {
+                    if(xhr.readyState === 4) {
+                      if(xhr.status === 200) { 
+                    resolve(JSON.parse(xhr.responseText));
+                     } else {
+                        reject("Erro na função");
+                        }
+                     }
+                 }; 
+            });
+        };
+
+        ghPromisse()
+            .then(function(resposta) {
+            console.log(resposta);
+        })
+            .catch(function(erro) {
+            console.warn(erro)
+        })
+    </script>
+    </Body>
+</html>
