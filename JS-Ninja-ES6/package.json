@@ -1,5 +1,5 @@
 {
-  "name": "curso-jsninja-es6",
+  "name": "JS-Ninja-ES6",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -12,3 +12,5 @@
     "dev": "babel ./main.js -o bundle.js -w"
   }
 }
+
+
