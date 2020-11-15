@@ -24,3 +24,19 @@ document.getElementById("adicionar").onclick = function() {
 document.getElementById("listar").onclick = function() {
    listaConv.listarConvidados(); 
 };
+
+/* arrow Functions */
+
+var soma = (x, y) => x + y;
+var mult = x => x * 2;
+
+console.log(mult(2));
+
+
+/* ex valores padrão   */
+const exp = (x, y = 2) => x * y;
+console.log(exp(2, 8));
+
+
+
+

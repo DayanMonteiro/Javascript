@@ -43,3 +43,23 @@ document.getElementById("adicionar").onclick = function () {
 document.getElementById("listar").onclick = function () {
   listaConv.listarConvidados();
 };
+/* arrow Functions */
+
+
+var soma = function soma(x, y) {
+  return x + y;
+};
+
+var mult = function mult(x) {
+  return x * 2;
+};
+
+console.log(mult(2));
+/* ex valores padrão   */
+
+var exp = function exp(x) {
+  var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  return x * y;
+};
+
+console.log(exp(2, 8));
