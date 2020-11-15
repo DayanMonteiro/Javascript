@@ -55,7 +55,9 @@ var mult = function mult(x) {
 };
 
 console.log(mult(2));
-/* ex valores padrão   */
+/* ex valores padrão  
+const para valores constantes
+let para valores variáveis */
 
 var exp = function exp(x) {
   var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
@@ -63,3 +65,33 @@ var exp = function exp(x) {
 };
 
 console.log(exp(2, 8));
+/* DESESTRUTURAÇÃO */
+
+var convidado = {
+  nome: "Dayan",
+  idade: 33,
+  endereco: {
+    logadouro: "Rua X",
+    numero: 175
+  }
+};
+var nome = convidado.nome,
+    idade = convidado.idade,
+    _convidado$endereco = convidado.endereco,
+    logadouro = _convidado$endereco.logadouro,
+    numero = _convidado$endereco.numero;
+/*
+console.log(nome);
+console.log(idade);
+console.log(logadouro, numero); */
+
+var imprimir = function imprimir(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade,
+      endereco = _ref.endereco;
+  console.log(convidado.nome);
+  console.log(convidado.idade);
+  console.log(convidado.endereco);
+};
+
+imprimir(convidado);
