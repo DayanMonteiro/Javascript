@@ -50,3 +50,16 @@ const mgs2 = `Olá ${nome}, idade ${idade}. Convidado aceito.`;
 
 console.log(msg1);
 console.log(msg2);
+
+/* Objetct short syntax */
+const nome =  "Dayan",
+const idade = 33,
+
+
+const convidado = {
+  nome,
+  idade,
+  endereco: "Rua Rio Grande do Sul, 39"
+};
+
+console.log(convidado);
