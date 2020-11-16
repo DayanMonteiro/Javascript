@@ -65,3 +65,6 @@ const imprimir = ({nome, idade, endereco}) => {
 }
 
 imprimir(convidado);
+
+
+
