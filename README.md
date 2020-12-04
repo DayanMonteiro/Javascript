@@ -5,4 +5,4 @@
 Curso de Javascript ministrado pelo professor Felipe Fontoura.
 
 
-!{diploma}(https://github.com/DayanMonteiro/Javascript/blob/master/diploma%20JS.jpg)
+![diploma](https://github.com/DayanMonteiro/Javascript/blob/master/diploma%20JS.jpg)
